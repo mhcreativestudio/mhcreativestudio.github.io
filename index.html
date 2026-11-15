@@ -2,735 +2,929 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-    content="MH Creative Studio provides thoughtful website optimization and digital presence support for growing businesses.">
-
-  <meta name="theme-color" content="#080808">
-
-  <title>MH Creative Studio | Thoughtful Digital Solutions</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <style>
-    :root {
-      --black: #080808;
-      --charcoal: #171717;
-      --gold: #c9a449;
-      --light-gold: #f0d68b;
-      --ivory: #f5f0e6;
-      --white: #ffffff;
-      --text: #292929;
-      --muted: #a7a19a;
-      --border: #ded5c5;
-      --serif: "Playfair Display", Georgia, serif;
-      --sans: "Inter", Arial, sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      font-family: var(--sans);
-      color: var(--text);
-      line-height: 1.75;
-      background: var(--ivory);
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1120px, 88%);
-      margin: auto;
-    }
-
-    /* HEADER */
-
-    header {
-      background: var(--black);
-      border-bottom: 1px solid #342a19;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .navbar {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--white);
-    }
-
-    .brand-mark {
-      font-family: var(--serif);
-      color: var(--gold);
-      font-size: 31px;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      display: grid;
-      place-items: center;
-    }
-
-    .brand-name {
-      font-family: var(--serif);
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: .5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      color: #e7e1d6;
-      font-size: 13px;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-contact {
-      border: 1px solid var(--gold);
-      padding: 9px 17px;
-      border-radius: 3px;
-      color: var(--light-gold) !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: 1px solid var(--gold);
-      color: var(--light-gold);
-      padding: 8px 12px;
-      cursor: pointer;
-      font: inherit;
-    }
-
-    /* HERO */
-
-    .hero {
-      background: var(--black);
-      color: var(--white);
-      padding: 115px 0 125px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(201,164,73,.15);
-      border-radius: 50%;
-      right: -150px;
-      top: 30px;
-      box-shadow: 0 0 0 45px rgba(201,164,73,.025),
-                  0 0 0 90px rgba(201,164,73,.02);
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 25px;
-    }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(40px, 6vw, 66px);
-      line-height: 1.17;
-      font-weight: 500;
-      max-width: 850px;
-      margin-bottom: 25px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 span {
-      color: var(--light-gold);
-    }
-
-    .hero-description {
-      color: #c6c0b6;
-      max-width: 630px;
-      font-size: 16px;
-      margin-bottom: 35px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 23px;
-      border-radius: 3px;
-      font-size: 13px;
-      font-weight: 600;
-      transition: .2s;
-    }
-
-    .btn-gold {
-      background: var(--gold);
-      color: var(--black);
-    }
-
-    .btn-gold:hover {
-      background: var(--light-gold);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid var(--gold);
-      color: var(--light-gold);
-    }
-
-    .btn-outline:hover {
-      background: rgba(201,164,73,.1);
-    }
-
-    /* INTRODUCTION */
-
-    .intro {
-      padding: 90px 0;
-      background: var(--ivory);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 65px;
-      align-items: center;
-    }
-
-    .section-label {
-      color: #96732f;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .section-title {
-      font-family: var(--serif);
-      font-size: clamp(30px, 4vw, 43px);
-      line-height: 1.25;
-      font-weight: 500;
-      color: var(--black);
-      margin-bottom: 20px;
-    }
-
-    .intro-copy {
-      color: #615c54;
-      font-size: 15px;
-    }
-
-    .intro-note {
-      border-left: 2px solid var(--gold);
-      padding: 8px 0 8px 22px;
-      color: #5b5140;
-      font-family: var(--serif);
-      font-size: 21px;
-      line-height: 1.55;
-    }
-
-    /* SERVICES */
-
-    .services {
-      background: var(--black);
-      color: var(--white);
-      padding: 95px 0;
-    }
-
-    .services .section-title {
-      color: var(--white);
-    }
-
-    .services-intro {
-      color: #bcb6aa;
-      max-width: 650px;
-      margin-bottom: 45px;
-      font-size: 15px;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: #151515;
-      border: 1px solid #393022;
-      padding: 32px;
-      border-radius: 5px;
-      transition: .25s;
-    }
-
-    .service-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-4px);
-    }
-
-    .service-number {
-      font-family: var(--serif);
-      color: var(--gold);
-      font-size: 28px;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: 500;
-      color: var(--light-gold);
-      margin-bottom: 12px;
-    }
-
-    .service-card p {
-      color: #bdb7ac;
-      font-size: 14px;
-    }
-
-    /* APPROACH */
-
-    .approach {
-      padding: 90px 0;
-      background: #fff;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-top: 42px;
-    }
-
-    .approach-item {
-      border-top: 2px solid var(--gold);
-      padding-top: 20px;
-    }
-
-    .approach-item h3 {
-      font-family: var(--serif);
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: var(--black);
-    }
-
-    .approach-item p {
-      font-size: 14px;
-      color: #6b665d;
-    }
-
-    /* CONTACT */
-
-    .contact {
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 85px 0;
-      text-align: center;
-    }
-
-    .contact .section-title {
-      color: var(--light-gold);
-    }
-
-    .contact p {
-      color: #c7c0b4;
-      max-width: 600px;
-      margin: 0 auto 28px;
-      font-size: 15px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      background: var(--black);
-      color: #aaa397;
-      padding: 28px 0;
-      border-top: 1px solid #342a19;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 15px;
-      font-size: 12px;
-    }
-
-    .footer-brand {
-      color: var(--light-gold);
-      font-family: var(--serif);
-      font-size: 17px;
-    }
-
-    footer a {
-      color: var(--light-gold);
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 760px) {
-      .navbar {
-        min-height: 72px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 72px;
-        left: 0;
-        right: 0;
-        padding: 22px 6%;
-        background: var(--black);
-        border-top: 1px solid #342a19;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .hero {
-        padding: 85px 0;
-      }
-
-      .intro-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .approach-grid {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .intro, .services, .approach {
-        padding: 70px 0;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MH Creative Studio | Thoughtful Digital Solutions</title>
+<meta name="description" content="MH Creative Studio helps businesses improve their websites and strengthen their digital presence through practical digital support.">
+<meta name="theme-color" content="#080706">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #080706;
+  --dark: #100e0a;
+  --gold: #c9a449;
+  --gold-light: #f0d58b;
+  --ivory: #f5f0e6;
+  --white: #fff;
+  --muted: #c6c0b5;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--sans);
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(1380px, 86%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  height: 82px;
+  background: rgba(8,7,6,.97);
+  border-bottom: 1px solid rgba(201,164,73,.35);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--white);
+}
+
+.brand-logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  color: #e9e3d8;
+  font-size: 14px;
+  transition: .25s;
+}
+
+.nav-links a:hover {
+  color: var(--gold-light);
+}
+
+.nav-links .contact-link {
+  border: 1px solid var(--gold);
+  padding: 11px 19px;
+  border-radius: 4px;
+  color: var(--gold-light);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: var(--gold-light);
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 545px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 83% 48%, #39270e 0%, #17110a 28%, transparent 58%),
+    linear-gradient(110deg, #080706 45%, #100d08 100%);
+  border-bottom: 1px solid rgba(201,164,73,.55);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  right: -100px;
+  top: -50px;
+  border: 1px solid rgba(201,164,73,.6);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 35px rgba(201,164,73,.035),
+    0 0 0 85px rgba(201,164,73,.04),
+    0 0 0 140px rgba(201,164,73,.025);
+  pointer-events: none;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  gap: 35px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 1.12;
+  letter-spacing: -.8px;
+  max-width: 780px;
+}
+
+.hero h1 span {
+  color: var(--gold-light);
+}
+
+.hero-description {
+  max-width: 650px;
+  color: #ddd7cc;
+  font-size: 16px;
+  margin-top: 23px;
+  margin-bottom: 28px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: .25s;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #090806;
+}
+
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+}
+
+.btn-outline:hover {
+  background: rgba(201,164,73,.12);
+}
+
+.hero-art {
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-art::before {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(201,164,73,.45);
+  border-radius: 50%;
+  box-shadow:
+    0 0 35px rgba(201,164,73,.12),
+    inset 0 0 40px rgba(201,164,73,.08);
+}
+
+.hero-art img {
+  width: min(330px, 85%);
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 28px rgba(201,164,73,.22));
+}
+
+/* SMALL GOLD DIVIDER */
+
+.gold-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ABOUT */
+
+.about {
+  padding: 85px 0;
+  background: #0b0907;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.workspace {
+  min-height: 330px;
+  background:
+    radial-gradient(ellipse at 50% 85%, rgba(201,164,73,.2), transparent 60%),
+    linear-gradient(135deg, #21180d, #090807 65%);
+  border: 1px solid rgba(201,164,73,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.workspace::before,
+.workspace::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 12px;
+  top: 0;
+  background: linear-gradient(90deg, #704a1c, #e1b75b, #3d2913);
+  opacity: .65;
+}
+
+.workspace::before {
+  left: 13%;
+}
+
+.workspace::after {
+  left: 19%;
+}
+
+.workspace-mark {
+  font-family: var(--serif);
+  color: var(--gold-light);
+  font-size: 65px;
+  text-align: center;
+  line-height: 1.1;
+  text-shadow: 0 0 25px rgba(201,164,73,.3);
+}
+
+.workspace-mark small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 7px;
+  margin-top: 12px;
+}
+
+.section-label {
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: clamp(30px, 3.6vw, 45px);
+  line-height: 1.25;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  color: var(--gold-light);
+}
+
+.about-copy {
+  color: #c9c2b7;
+  font-size: 15px;
+  max-width: 650px;
+}
+
+/* SERVICES */
+
+.services {
+  padding: 90px 0;
+  background: #100e0a;
+  border-top: 1px solid rgba(201,164,73,.25);
+  border-bottom: 1px solid rgba(201,164,73,.25);
+}
+
+.services-heading {
+  max-width: 720px;
+  margin-bottom: 45px;
+}
+
+.services-heading p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  padding: 30px 22px;
+  border: 1px solid rgba(201,164,73,.3);
+  background: rgba(255,255,255,.018);
+  transition: .25s;
+}
+
+.service-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+  background: rgba(201,164,73,.05);
+}
+
+.service-icon {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 20px;
+  color: var(--gold-light);
+}
+
+.service-card h3 {
+  font-family: var(--serif);
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #bbb4a9;
+  font-size: 13px;
+}
+
+/* APPROACH */
+
+.approach {
+  padding: 90px 0;
+  background: var(--ivory);
+  color: #252018;
+}
+
+.approach .section-title {
+  color: #17130d;
+}
+
+.approach-intro {
+  color: #696256;
+  max-width: 650px;
+  margin-bottom: 40px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.approach-item {
+  border-top: 2px solid var(--gold);
+  padding-top: 20px;
+}
+
+.approach-item .number {
+  font-family: var(--serif);
+  color: #ad8738;
+  font-size: 30px;
+}
+
+.approach-item h3 {
+  font-family: var(--serif);
+  font-size: 23px;
+  margin: 8px 0;
+}
+
+.approach-item p {
+  color: #696256;
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.contact {
+  padding: 85px 0;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, #241a0d, #0b0907 70%);
+}
+
+.contact .section-title {
+  color: var(--gold-light);
+}
+
+.contact p {
+  color: #c9c2b7;
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 27px 0;
+  background: #050504;
+  border-top: 1px solid rgba(201,164,73,.35);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  color: #aaa397;
+  font-size: 12px;
+}
+
+.footer-brand {
+  font-family: var(--serif);
+  color: var(--gold-light);
+  font-size: 18px;
+}
+
+footer a {
+  color: var(--gold-light);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 18px;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr .7fr;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  header {
+    height: 72px;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #080706;
+    padding: 25px 7%;
+    border-bottom: 1px solid var(--gold);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .container {
+    width: 88%;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
+
+  .hero h1 {
+    font-size: clamp(39px, 10vw, 53px);
+  }
+
+  .hero-art {
+    min-height: 230px;
+  }
+
+  .hero-art::before {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-art img {
+    width: 215px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace {
+    min-height: 230px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about,
+  .services,
+  .approach {
+    padding: 65px 0;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="container navbar">
+<!-- HEADER -->
 
-      <a class="brand" href="#home" aria-label="MH Creative Studio home">
-        <span class="brand-mark">MH</span>
-        <span class="brand-name">MH Creative Studio</span>
-      </a>
+<header>
+  <div class="container navbar">
 
-      <button class="menu-toggle"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-        onclick="toggleMenu()">
-        Menu ☰
-      </button>
+    <a class="brand" href="#home">
+      <img
+        src="MH_Creative_Studio_Monogram_Profile.png"
+        alt="MH Studio original gold monogram"
+        class="brand-logo">
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#home" onclick="closeMenu()">Home</a>
-        <a href="#about" onclick="closeMenu()">About</a>
-        <a href="#services" onclick="closeMenu()">Services</a>
-        <a href="#approach" onclick="closeMenu()">Our Approach</a>
-        <a class="nav-contact" href="#contact" onclick="closeMenu()">Let's Connect</a>
-      </nav>
+      <span class="brand-name">MH Creative Studio</span>
+    </a>
 
-    </div>
-  </header>
+    <button class="menu-toggle"
+      onclick="toggleMenu()"
+      aria-label="Open navigation"
+      aria-expanded="false">
+      Menu ☰
+    </button>
 
-  <main>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#approach" onclick="closeMenu()">Our Approach</a>
+      <a href="#contact" class="contact-link" onclick="closeMenu()">Let's Connect</a>
+    </nav>
 
-    <section class="hero" id="home">
-      <div class="container">
+  </div>
+</header>
 
-        <p class="eyebrow">Thoughtful Digital Solutions</p>
+<main>
 
-        <h1>
-          A stronger digital presence starts with a
-          <span>smarter foundation.</span>
-        </h1>
+<!-- HERO -->
 
-        <p class="hero-description">
-          We help businesses identify opportunities to improve
-          their websites and build a clearer, more credible
-          online presence through practical digital support.
-        </p>
+<section class="hero" id="home">
+  <div class="container hero-inner">
 
-        <div class="actions">
-          <a href="#services" class="btn btn-gold">
-            Explore Our Services
-          </a>
+    <div class="hero-copy">
+      <p class="eyebrow">Thoughtful Digital Solutions</p>
 
-          <a href="#contact" class="btn btn-outline">
-            Let's Connect
-          </a>
-        </div>
+      <h1>
+        A stronger digital presence starts with a
+        <span>smarter foundation.</span>
+      </h1>
 
-      </div>
-    </section>
+      <p class="hero-description">
+        We help businesses identify opportunities to improve
+        their websites and build a clearer, more credible
+        online presence through practical digital support.
+      </p>
 
-    <section class="intro" id="about">
-      <div class="container intro-grid">
-
-        <div>
-          <p class="section-label">About the Studio</p>
-
-          <h2 class="section-title">
-            Practical thinking.
-            Thoughtful digital execution.
-          </h2>
-        </div>
-
-        <div>
-          <p class="intro-copy">
-            MH Creative Studio is a founder-led digital studio
-            focused on helping businesses strengthen their
-            online foundations.
-
-            We believe effective digital work begins with
-            understanding the business, identifying real
-            opportunities and making improvements with purpose.
-          </p>
-
-          <br>
-
-          <p class="intro-note">
-            Our philosophy is simple: make digital experiences
-            clearer, more useful and more purposeful.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="container">
-
-        <p class="section-label">What We Offer</p>
-
-        <h2 class="section-title">
-          Focused support for your digital presence.
-        </h2>
-
-        <p class="services-intro">
-          Our services focus on practical improvements that
-          help businesses create a stronger and more organized
-          digital foundation.
-        </p>
-
-        <div class="service-grid">
-
-          <article class="service-card">
-            <div class="service-number">01</div>
-
-            <h3>Website Audits</h3>
-
-            <p>
-              Identify website issues, usability concerns and
-              opportunities for improvement through structured
-              website reviews.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">02</div>
-
-            <h3>Website Improvement</h3>
-
-            <p>
-              Support improvements to website structure,
-              content clarity, navigation and user experience.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">03</div>
-
-            <h3>Digital Presence Support</h3>
-
-            <p>
-              Practical support for organizing online presence
-              and maintaining consistent business communication
-              across digital channels.
-            </p>
-          </article>
-
-          <article class="service-card">
-            <div class="service-number">04</div>
-
-            <h3>SEO Foundations</h3>
-
-            <p>
-              Foundational website and content improvements
-              that help search engines understand website
-              pages more clearly.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="approach" id="approach">
-      <div class="container">
-
-        <p class="section-label">Our Approach</p>
-
-        <h2 class="section-title">
-          Thoughtful work, built around real needs.
-        </h2>
-
-        <div class="approach-grid">
-
-          <article class="approach-item">
-            <h3>Understand</h3>
-
-            <p>
-              We begin by understanding your business,
-              website and digital objectives.
-            </p>
-          </article>
-
-          <article class="approach-item">
-            <h3>Identify</h3>
-
-            <p>
-              We examine the available information and
-              identify meaningful areas for improvement.
-            </p>
-          </article>
-
-          <article class="approach-item">
-            <h3>Improve</h3>
-
-            <p>
-              We focus on practical, purposeful improvements
-              and clear communication throughout the work.
-            </p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="container">
-
-        <p class="section-label">Start a Conversation</p>
-
-        <h2 class="section-title">
-          Let's strengthen your digital presence.
-        </h2>
-
-        <p>
-          Have a website improvement project or want to
-          discuss your business's digital presence?
-          We'd be glad to hear from you.
-        </p>
-
-        <a
-          href="https://www.facebook.com/profile.php?id=61589499061553"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-gold">
-          Connect with MH Creative Studio
+      <div class="buttons">
+        <a href="#services" class="btn btn-gold">
+          Explore Our Services &nbsp; →
         </a>
 
+        <a href="#contact" class="btn btn-outline">
+          Let's Connect &nbsp; →
+        </a>
       </div>
-    </section>
+    </div>
 
-  </main>
+    <div class="hero-art">
+      <img
+        src="MH_Creative_Studio_Monogram_Profile.png"
+        alt="MH Studio gold monogram">
+    </div>
 
-  <footer>
-    <div class="container footer-inner">
+  </div>
+</section>
 
-      <span class="footer-brand">MH Creative Studio</span>
+<!-- ABOUT -->
 
-      <span>
-        © <span id="year">2026</span> MH Creative Studio.
-        All rights reserved.
-      </span>
+<section class="about" id="about">
+  <div class="container about-grid">
 
-      <a href="#home">Back to top ↑</a>
+    <div class="workspace">
+      <div class="workspace-mark">
+        MH
+        <small>CREATIVE STUDIO</small>
+      </div>
+    </div>
+
+    <div>
+      <p class="section-label">About the Studio</p>
+
+      <h2 class="section-title">
+        Practical thinking.<br>
+        <span>Thoughtful digital execution.</span>
+      </h2>
+
+      <p class="about-copy">
+        MH Creative Studio is a founder-led digital studio
+        focused on helping businesses strengthen their
+        online foundations.
+
+        We believe effective digital work begins with
+        understanding the business, identifying real
+        opportunities and making improvements with purpose.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="services-heading">
+      <p class="section-label">What We Do</p>
+
+      <h2 class="section-title">
+        Focused services.<br>
+        <span>Purposeful improvements.</span>
+      </h2>
+
+      <p>
+        Practical digital support to help businesses build
+        a clearer, more organized and more credible online presence.
+      </p>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7">
+          <circle cx="20" cy="19" r="13"/>
+          <path d="m29 29 12 12M13 22l5-6 4 4 7-8"/>
+        </svg>
+
+        <h3>Website Audits</h3>
+        <p>
+          Structured website reviews to identify usability,
+          content and technical improvement opportunities.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7">
+          <rect x="4" y="5" width="32" height="25" rx="2"/>
+          <path d="M4 12h32M10 18h12M10 23h8"/>
+          <circle cx="35" cy="34" r="8"/>
+          <path d="M35 29v10M30 34h10"/>
+        </svg>
+
+        <h3>Website Improvement</h3>
+        <p>
+          Support for clearer website structure, navigation,
+          content organization and user experience.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M5 40h38M9 34V22h7v12M21 34V15h7v19M33 34V7h7v27"/>
+          <path d="m8 16 11-8 8 3 12-7M34 4h5v5"/>
+        </svg>
+
+        <h3>Digital Presence Support</h3>
+        <p>
+          Practical assistance with organizing business
+          communication and online channels.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.7">
+          <circle cx="24" cy="24" r="19"/>
+          <path d="M5 24h38M24 5c7 7 7 31 0 38M24 5c-7 7-7 31 0 38M9 14h30M9 34h30"/>
+        </svg>
+
+        <h3>SEO Foundations</h3>
+        <p>
+          Foundational page and content improvements that
+          help search engines understand website content.
+        </p>
+      </article>
 
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("navLinks");
-      const button = document.querySelector(".menu-toggle");
-      const isOpen = menu.classList.toggle("open");
+<!-- APPROACH -->
 
-      button.setAttribute("aria-expanded", isOpen);
-    }
+<section class="approach" id="approach">
+  <div class="container">
 
-    function closeMenu() {
-      document.getElementById("navLinks").classList.remove("open");
-      document.querySelector(".menu-toggle")
-        .setAttribute("aria-expanded", "false");
-    }
+    <p class="section-label">Our Approach</p>
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+    <h2 class="section-title">
+      Good digital work begins with
+      <span>understanding.</span>
+    </h2>
+
+    <p class="approach-intro">
+      We follow a practical process focused on understanding
+      business needs and making improvements with purpose.
+    </p>
+
+    <div class="approach-grid">
+
+      <article class="approach-item">
+        <span class="number">01</span>
+        <h3>Understand</h3>
+        <p>
+          Learn about the business, its website and its
+          digital objectives.
+        </p>
+      </article>
+
+      <article class="approach-item">
+        <span class="number">02</span>
+        <h3>Identify</h3>
+        <p>
+          Review the available information and identify
+          meaningful areas for improvement.
+        </p>
+      </article>
+
+      <article class="approach-item">
+        <span class="number">03</span>
+        <h3>Improve</h3>
+        <p>
+          Focus on practical, purposeful improvements
+          and clear communication.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <p class="section-label">Start a Conversation</p>
+
+    <h2 class="section-title">
+      Let's build a stronger digital presence.
+    </h2>
+
+    <p>
+      Have a website improvement project or want to discuss
+      your business's digital presence? Let's start a conversation.
+    </p>
+
+    <a
+      href="https://www.facebook.com/profile.php?id=61589499061553"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn btn-gold">
+      Connect with MH Creative Studio &nbsp; →
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+
+    <span class="footer-brand">MH Creative Studio</span>
+
+    <span>
+      © <span id="year"></span> MH Creative Studio.
+      All rights reserved.
+    </span>
+
+    <a href="#home">Back to top ↑</a>
+
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("navLinks");
+  const button = document.querySelector(".menu-toggle");
+
+  const opened = menu.classList.toggle("open");
+
+  button.setAttribute("aria-expanded", opened);
+}
+
+function closeMenu() {
+  document.getElementById("navLinks").classList.remove("open");
+
+  document.querySelector(".menu-toggle")
+    .setAttribute("aria-expanded", "false");
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
 
 </body>
 </html>
