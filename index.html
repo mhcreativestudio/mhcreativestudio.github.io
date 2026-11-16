@@ -364,6 +364,42 @@ footer a{color:var(--gold2)}
 @media(max-width:480px){.case-grid{grid-template-columns:1fr}.case-study h2{font-size:32px}}
 </style>
 
+ <!-- Homepage preview: place after Services and before Our Approach. -->
+<section class="case-preview" id="case-study">
+  <div class="case-preview-inner">
+    <div class="case-preview-copy">
+      <p class="case-preview-label">Selected Work · Anonymized Audit</p>
+      <h2>Website Experience &amp; Conversion Audit</h2>
+      <p>A practical review of website messaging, buying guidance, pricing clarity, customer trust and the enquiry journey—translated into a prioritised improvement roadmap.</p>
+      <a class="case-preview-link" href="case-study.html">Explore Case Study <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="case-preview-visual" aria-label="Abstract audit interface diagram">
+      <div class="cp-top"><i></i><i></i><i></i><span>WEBSITE AUDIT</span></div>
+      <div class="cp-main"><b>Visitor experience</b><div class="cp-lines"><i></i><i></i><i></i></div>
+        <div class="cp-cards"><span>Messaging</span><span>Buying guidance</span><span>Trust signals</span></div>
+        <div class="cp-bottom">OBSERVATION <em>→</em> RECOMMENDATION</div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.case-preview{padding:76px 0;background:#0b0907;border-top:1px solid rgba(210,168,62,.35);border-bottom:1px solid rgba(210,168,62,.35)}
+.case-preview-inner{width:min(1180px,88%);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.case-preview-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#d2a83e;margin:0 0 13px}
+.case-preview h2{font:500 clamp(29px,3.5vw,43px)/1.2 "Playfair Display",Georgia,serif;color:#f8f5ef;margin:0 0 15px}
+.case-preview-copy>p:not(.case-preview-label){font-size:14px;line-height:1.85;color:#c9c1b3;max-width:590px;margin:0 0 24px}
+.case-preview-link{display:inline-flex;gap:12px;align-items:center;background:#d2a83e;color:#080706;padding:12px 17px;border-radius:3px;font-size:13px;font-weight:700}
+.case-preview-link:hover{background:#f1d17b}
+.case-preview-visual{border:1px solid rgba(210,168,62,.45);background:linear-gradient(145deg,#17130d,#0b0a08);padding:0;min-height:220px}
+.cp-top{height:34px;border-bottom:1px solid #514329;display:flex;align-items:center;gap:6px;padding:0 12px}
+.cp-top i{width:6px;height:6px;border-radius:50%;background:#b18d42}.cp-top span{font-size:9px;letter-spacing:1.5px;color:#a89a7e;margin-left:8px}
+.cp-main{padding:25px}.cp-main>b{font:500 19px "Playfair Display",Georgia,serif;color:#f1d17b}
+.cp-lines{margin:13px 0 18px}.cp-lines i{display:block;height:6px;width:90%;background:#494237;margin:8px 0}.cp-lines i:nth-child(2){width:72%}.cp-lines i:nth-child(3){width:53%}
+.cp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.cp-cards span{border:1px solid #62502d;padding:12px 8px;text-align:center;font-size:10px;color:#d7c9a8}
+.cp-bottom{margin-top:18px;border-top:1px solid #514329;padding-top:13px;color:#b5a88e;font-size:9px;letter-spacing:1.4px}.cp-bottom em{color:#e4bd5b;font-style:normal;padding:0 8px}
+@media(max-width:760px){.case-preview{padding:55px 0}.case-preview-inner{grid-template-columns:1fr;gap:28px}.case-preview-visual{min-height:190px}}
+</style>
+
 <section class="approach" id="approach">
  <div class="container">
   <p class="label">Our Approach</p>
