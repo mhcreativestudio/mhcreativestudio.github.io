@@ -95,6 +95,22 @@ h2{font:500 clamp(27px,2.5vw,39px)/1.2 var(--serif);color:#f8f5ef}
 .contact-form button{grid-column:1/-1;justify-self:start;border:0;cursor:pointer;font:700 14px var(--sans)}
 .form-note{grid-column:1/-1;color:#bdb5a8;font-size:12px;margin-top:-8px}
 @media(max-width:600px){.contact-form{grid-template-columns:1fr;padding:22px 18px}.form-field.full{grid-column:auto}.contact-form button,.form-note{grid-column:auto}}
+
+.founder{padding:76px 0;background:#090807;border-top:1px solid rgba(210,168,62,.3);border-bottom:1px solid rgba(210,168,62,.35)}
+.founder-layout{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.6fr);gap:54px;align-items:center}
+.founder-mark{min-height:280px;border:1px solid rgba(210,168,62,.5);background:radial-gradient(ellipse at center,#241a0b,#080706 72%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px}
+.founder-monogram{width:112px;height:112px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold2);font:500 42px var(--serif);margin-bottom:18px}
+.founder-mark strong{font:500 21px var(--serif);color:var(--gold2)}
+.founder-mark span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c9c1b3;margin-top:5px}
+.founder-copy h2{margin:4px 0 8px}
+.founder-role{color:var(--gold2);font-size:13px;font-weight:600;letter-spacing:1px;margin-bottom:20px}
+.founder-copy p{color:#d3cec5;font-size:14px;line-height:1.75;margin-top:12px}
+.founder-principles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 22px;margin-top:22px}
+.founder-principles div{border-top:1px solid rgba(210,168,62,.45);padding-top:10px}
+.founder-principles strong{display:block;color:var(--gold2);font:500 17px var(--serif);margin-bottom:3px}
+.founder-principles span{display:block;color:#c9c3b8;font-size:12px;line-height:1.55}
+@media(max-width:720px){.founder{padding:55px 0}.founder-layout{grid-template-columns:1fr;gap:30px}.founder-mark{min-height:210px}.founder-principles{gap:12px}}
+
 footer{border-top:1px solid rgba(210,168,62,.45);padding:23px 0;background:#050504;color:#aaa397;font-size:12px}
 .footer{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
 .footer strong{font:18px var(--serif);color:var(--gold2)}
@@ -149,6 +165,7 @@ footer a{color:var(--gold2)}
    <a href="#about" onclick="closeMenu()">About</a>
    <a href="#services" onclick="closeMenu()">Services</a>
    <a href="#approach" onclick="closeMenu()">Our Approach</a>
+   <a href="#founder" onclick="closeMenu()">Founder</a>
    <a class="connect" href="#contact" onclick="closeMenu()">Let's Connect</a>
   </nav>
  </div>
@@ -161,7 +178,7 @@ footer a{color:var(--gold2)}
   <div class="hero-copy">
    <p class="eyebrow">Thoughtful Digital Solutions</p>
    <h1>A stronger digital presence starts with a <span>smarter foundation.</span></h1>
-   <p>We help businesses identify opportunities to improve their websites and build a clearer, more credible online presence.</p>
+   <p>MH Creative Studio helps businesses strengthen their online presence through practical website optimization, digital strategy, and thoughtful improvement recommendations.</p>
    <div class="actions">
     <a class="btn primary" href="#services">Explore Our Services <span>→</span></a>
     <a class="btn secondary" href="#contact">Let's Connect <span>→</span></a>
@@ -177,7 +194,7 @@ footer a{color:var(--gold2)}
   <div class="studio-copy">
    <p class="label">About the Studio</p>
    <h2>Practical thinking.<br><span class="gold">Thoughtful digital execution.</span></h2>
-   <p>MH Creative Studio is a founder-led digital studio focused on helping businesses strengthen their online foundation.</p>
+   <p>MH Creative Studio is a digital services studio focused on helping businesses strengthen their online foundations. Its approach starts with understanding each business's needs, identifying meaningful opportunities, and recommending practical improvements.</p>
   </div>
   <div class="service-list" id="services">
    <div class="service">
@@ -224,6 +241,31 @@ footer a{color:var(--gold2)}
    <article class="step"><b>01</b><h3>Understand</h3><p>Learn about the business, its website and its digital objectives.</p></article>
    <article class="step"><b>02</b><h3>Identify</h3><p>Review the available information and identify meaningful areas for improvement.</p></article>
    <article class="step"><b>03</b><h3>Improve</h3><p>Focus on practical, purposeful improvements and clear communication.</p></article>
+  </div>
+ </div>
+</section>
+
+
+<section class="founder" id="founder">
+ <div class="container founder-layout">
+  <div class="founder-mark" aria-label="Founder initials MH">
+   <div class="founder-monogram">MH</div>
+   <strong>Engr. Maha Hayat</strong>
+   <span>Founder · MH Creative Studio</span>
+  </div>
+  <div class="founder-copy">
+   <p class="label">Meet the Founder</p>
+   <h2>Engr. Maha Hayat</h2>
+   <p class="founder-role">Founder | MH Creative Studio</p>
+   <p>MH Creative Studio was founded by Engr. Maha Hayat, an Electrical Engineer who brings an analytical and structured approach to problem-solving.</p>
+   <p>Her professional interest in digital strategy developed through practical exposure to website auditing, identifying technical and on-page improvement opportunities, and preparing structured recommendations.</p>
+   <p>She established MH Creative Studio to help businesses build stronger digital foundations through practical website optimization and thoughtful digital support. Her approach is guided by clarity, practicality, integrity, and accountability.</p>
+   <div class="founder-principles">
+    <div><strong>Clarity</strong><span>Making recommendations easy to understand.</span></div>
+    <div><strong>Practicality</strong><span>Focusing on achievable improvements.</span></div>
+    <div><strong>Integrity</strong><span>Being transparent about capabilities and outcomes.</span></div>
+    <div><strong>Accountability</strong><span>Taking responsibility for agreed work and communication.</span></div>
+   </div>
   </div>
  </div>
 </section>
