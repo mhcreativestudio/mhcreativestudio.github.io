@@ -167,6 +167,88 @@ footer a{color:var(--gold2)}
   }
 }
 
+
+/* Revised About + Services composition */
+.studio{
+  grid-template-columns:minmax(360px,42%) minmax(0,58%);
+  align-items:stretch;
+  min-height:0;
+}
+.workspace{
+  min-height:100%;
+  background:#17110a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.workspace img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:420px;
+  max-height:620px;
+  object-fit:contain;
+  object-position:center;
+}
+.studio-content{
+  display:block;
+  padding:clamp(38px,5vw,76px) clamp(32px,5vw,84px);
+  align-self:center;
+}
+.studio-copy{max-width:820px;padding-right:0}
+.studio-copy p{font-size:15px;line-height:1.85;margin-top:16px}
+.more{padding:78px 0 86px}
+.more-head{margin-bottom:40px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+  border-top:1px solid rgba(210,168,62,.8);
+  border-bottom:1px solid rgba(210,168,62,.8);
+}
+.card{
+  background:transparent;
+  border:0;
+  border-right:1px solid rgba(210,168,62,.45);
+  padding:30px 24px 32px;
+  min-height:235px;
+}
+.card:last-child{border-right:0}
+.card svg{
+  width:42px;height:42px;
+  fill:none;stroke:var(--gold);stroke-width:1.6;
+  stroke-linecap:round;stroke-linejoin:round;
+  margin-bottom:20px;
+}
+.card h3{font-size:20px;line-height:1.3;margin-bottom:12px}
+.card p{font-size:13px;line-height:1.75}
+@media(min-width:900px){
+ .studio-copy p,.founder-copy p,.more-head p,.step p,.contact-intro>p:not(.label){
+   text-align:justify;text-justify:inter-word;hyphens:auto;
+ }
+}
+@media(max-width:1050px){
+ .studio{grid-template-columns:1fr}
+ .workspace{max-height:460px}
+ .workspace img{min-height:0;max-height:460px;width:100%;height:auto;object-fit:contain}
+ .studio-content{padding:42px 6%}
+ .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .card:nth-child(2){border-right:0}
+ .card:nth-child(-n+2){border-bottom:1px solid rgba(210,168,62,.45)}
+}
+@media(max-width:720px){
+ .studio{grid-template-columns:1fr}
+ .workspace{max-height:none}
+ .workspace img{width:100%;height:auto;min-height:0;max-height:none;object-fit:contain}
+ .studio-content{padding:38px 6%}
+ .studio-copy p{font-size:14px;line-height:1.8}
+ .cards{grid-template-columns:1fr}
+ .card,.card:nth-child(2){border-right:0;border-bottom:1px solid rgba(210,168,62,.45);min-height:0;padding:25px 20px}
+ .card:last-child{border-bottom:0}
+ .card svg{margin-bottom:12px}
+}
+
 </style>
 </head>
 <body>
@@ -205,7 +287,7 @@ footer a{color:var(--gold2)}
 </section>
 
 <section class="studio" id="about">
- <div class="workspace"><img src="workspace.jpg" alt="Warm, elegant creative studio workspace"></div>
+ <div class="workspace"><img src="workspace.jpg" alt="MH Creative Studio workspace with branded mug, plant and laptop"></div>
  <div class="studio-content">
   <div class="studio-copy">
    <p class="label">About the Studio</p>
@@ -213,24 +295,6 @@ footer a{color:var(--gold2)}
    <p>MH Creative Studio is a digital services studio focused on helping businesses strengthen their online foundations. We believe an effective digital presence starts with understanding a business's needs, identifying what can be improved, and developing practical solutions that support its goals.</p>
    <p>Our approach combines analytical thinking, attention to detail, and clear communication. We focus on meaningful improvements rather than unrealistic promises. Whether a business needs a clearer website structure, an evaluation of its existing online presence, or practical optimization recommendations, our aim is to make the next steps easier to understand and implement.</p>
    <p><strong>Our commitment:</strong> Honest advice, thoughtful work, and practical recommendations.</p>
-  </div>
-  <div class="service-list" id="services">
-   <div class="service">
-    <svg viewBox="0 0 48 48"><circle cx="19" cy="19" r="13"/><path d="m29 29 12 12M12 21l5-6 4 4 7-9"/></svg>
-    <span>Website<br>Audits</span>
-   </div>
-   <div class="service">
-    <svg viewBox="0 0 48 48"><rect x="4" y="5" width="32" height="25" rx="2"/><path d="M4 12h32M10 18h12"/><circle cx="35" cy="34" r="8"/><path d="M35 29v10M30 34h10"/></svg>
-    <span>Website<br>Improvement</span>
-   </div>
-   <div class="service">
-    <svg viewBox="0 0 48 48"><path d="M5 40h38M9 34V23h7v11M21 34V16h7v18M33 34V8h7v26M8 16l11-8 8 3 12-7M34 4h5v5"/></svg>
-    <span>Digital Presence<br>Support</span>
-   </div>
-   <div class="service">
-    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c7 7 7 31 0 38M24 5c-7 7-7 31 0 38M9 14h30M9 34h30"/></svg>
-    <span>SEO<br>Foundations</span>
-   </div>
   </div>
  </div>
 </section>
@@ -243,10 +307,22 @@ footer a{color:var(--gold2)}
    <p>Practical services designed around real business needs, clear communication and purposeful improvements.</p>
   </div>
   <div class="cards">
-   <article class="card"><h3>Website Audits</h3><p>Structured reviews to identify usability, content and technical improvement opportunities.</p></article>
-   <article class="card"><h3>Website Improvement</h3><p>Support for clearer website structure, navigation, content organization and user experience.</p></article>
-   <article class="card"><h3>Digital Presence</h3><p>Practical assistance with organizing business communication and online channels.</p></article>
-   <article class="card"><h3>SEO Foundations</h3><p>Foundational page and content improvements that help search engines understand website content.</p></article>
+   <article class="card">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="19" cy="19" r="13"/><path d="m29 29 12 12M12 21l5-6 4 4 7-9"/></svg>
+    <h3>Website Audits</h3><p>Structured reviews to identify usability, content and technical improvement opportunities.</p>
+   </article>
+   <article class="card">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="5" width="32" height="25" rx="2"/><path d="M4 12h32M10 18h12"/><circle cx="35" cy="34" r="8"/><path d="M35 29v10M30 34h10"/></svg>
+    <h3>Website Improvement</h3><p>Support for clearer website structure, navigation, content organization and user experience.</p>
+   </article>
+   <article class="card">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 40h38M9 34V23h7v11M21 34V16h7v18M33 34V8h7v26M8 16l11-8 8 3 12-7M34 4h5v5"/></svg>
+    <h3>Digital Presence Support</h3><p>Practical assistance with organizing business communication and online channels.</p>
+   </article>
+   <article class="card">
+    <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19"/><path d="M5 24h38M24 5c7 7 7 31 0 38M24 5c-7 7-7 31 0 38M9 14h30M9 34h30"/></svg>
+    <h3>SEO Foundations</h3><p>Foundational page and content improvements that help search engines understand website content.</p>
+   </article>
   </div>
  </div>
 </section>
