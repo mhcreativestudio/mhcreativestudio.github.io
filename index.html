@@ -1,297 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080706">
-<meta name="description" content="Explore practical website optimisation examples across awareness, interest, consideration, conversion and retention.">
-<title>Website Optimisation Gallery | MH Creative Studio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Homepage preview: place after Services and before Our Approach. -->
+<section class="case-preview" id="case-study">
+  <div class="case-preview-inner">
+    <div class="case-preview-copy">
+      <p class="case-preview-label">Selected Work · Anonymized Audit</p>
+      <h2>Website Experience &amp; Conversion Audit</h2>
+      <p>A practical review of website messaging, buying guidance, pricing clarity, customer trust and the enquiry journey—translated into a prioritised improvement roadmap.</p>
+      <a class="case-preview-link" href="case-study.html">Explore Case Study <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="case-preview-visual" aria-label="Abstract audit interface diagram">
+      <div class="cp-top"><i></i><i></i><i></i><span>WEBSITE AUDIT</span></div>
+      <div class="cp-main"><b>Visitor experience</b><div class="cp-lines"><i></i><i></i><i></i></div>
+        <div class="cp-cards"><span>Messaging</span><span>Buying guidance</span><span>Trust signals</span></div>
+        <div class="cp-bottom">OBSERVATION <em>→</em> RECOMMENDATION</div>
+      </div>
+    </div>
+  </div>
+</section>
 <style>
-:root{--bg:#080706;--panel:#100e0a;--panel2:#15120c;--gold:#d2a83e;--gold2:#f1d17b;--white:#f8f5ef;--muted:#c9c1b3;--line:rgba(210,168,62,.34);--serif:"Playfair Display",Georgia,serif;--sans:"Inter",Arial,sans-serif;--red:#ef786b;--green:#78c69a}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--bg);color:var(--white);font-family:var(--sans);line-height:1.55}
-a{color:inherit;text-decoration:none}
-button,input{font:inherit}
-.wrap{width:min(1240px,88%);margin:auto}
-header{height:82px;border-bottom:1px solid var(--line);background:rgba(8,7,6,.96);position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
-.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;min-width:0}
-.brand img{display:block;width:min(410px,40vw);height:auto;max-height:62px;object-fit:contain;object-position:left center}
-.back{font-size:13px;color:var(--muted);white-space:nowrap}
-.back:hover{color:var(--gold2)}
-.hero{position:relative;overflow:hidden;padding:78px 0 54px;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 78% 28%,rgba(156,111,35,.17),transparent 38%),linear-gradient(115deg,#080706,#0d0a06 65%,#080706)}
-.hero:after{content:"";position:absolute;width:540px;height:540px;border:1px solid rgba(210,168,62,.15);border-radius:50%;right:-190px;top:-260px;box-shadow:0 0 0 35px rgba(210,168,62,.025),0 0 0 75px rgba(210,168,62,.018);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center;position:relative;z-index:1}
-.kicker,.section-tag{color:var(--gold);font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700}
-.kicker{display:flex;align-items:center;gap:14px}
-.kicker:after{content:"";width:70px;height:1px;background:var(--gold)}
-h1,h2,h3{font-family:var(--serif);font-weight:500}
-h1{font-size:clamp(42px,5.6vw,68px);line-height:1.08;letter-spacing:-1.2px;margin:17px 0 18px;max-width:700px}
-h1 span{color:var(--gold2)}
-.hero-copy>p:not(.kicker){font-size:17px;color:#ded8cd;max-width:570px;line-height:1.8;margin:0}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:4px;font-size:13px;font-weight:600;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:linear-gradient(110deg,#d2a83e,#f1d17b);color:#171108}
-.btn.secondary{border:1px solid var(--gold);color:var(--gold2)}
-.hero-art{min-height:300px;position:relative;display:grid;place-items:center}
-.funnel-art{width:min(100%,460px);display:grid;gap:7px;justify-items:center;position:relative;z-index:1}
-.funnel-art div{height:43px;display:grid;place-items:center;border:1px solid rgba(241,209,123,.7);background:linear-gradient(90deg,rgba(110,77,25,.35),rgba(210,168,62,.16),rgba(110,77,25,.35));clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);font:500 15px var(--serif);color:#f6dfa3;animation:rise 6s ease-in-out infinite}
-.funnel-art div:nth-child(1){width:100%}.funnel-art div:nth-child(2){width:88%;animation-delay:.2s}.funnel-art div:nth-child(3){width:76%;animation-delay:.4s}.funnel-art div:nth-child(4){width:64%;animation-delay:.6s}.funnel-art div:nth-child(5){width:52%;animation-delay:.8s}
-.hero-orbit{position:absolute;width:310px;height:310px;border:1px solid rgba(210,168,62,.2);border-radius:50%;animation:orbit 22s linear infinite}
-.hero-orbit:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--gold2);top:28px;left:50px;box-shadow:0 0 18px var(--gold2)}
-@keyframes orbit{to{transform:rotate(360deg)}}
-@keyframes rise{0%,100%{filter:brightness(.85);transform:translateY(0)}50%{filter:brightness(1.18);transform:translateY(-3px)}}
-.hero-foot{margin-top:34px;display:flex;gap:22px;flex-wrap:wrap;color:#b9ad98;font-size:11px;letter-spacing:.3px}
-.hero-foot span:before{content:"◆";color:var(--gold);font-size:8px;margin-right:8px}
-.funnel-nav{padding:34px 0 28px;border-bottom:1px solid var(--line);background:#0b0907}
-.funnel-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
-.funnel-step{position:relative;display:flex;align-items:center;gap:11px;padding:14px 10px;border:1px solid transparent;border-radius:5px;color:#d6cec0;transition:.2s;min-width:0}
-.funnel-step:hover,.funnel-step.active{border-color:var(--line);background:linear-gradient(120deg,rgba(210,168,62,.12),rgba(210,168,62,.025));color:var(--white)}
-.funnel-step .n{flex:0 0 32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#2b2110;color:var(--gold2);font-weight:700}
-.funnel-step.active .n{background:var(--gold2);color:#171108}
-.funnel-step strong{display:block;font:500 16px var(--serif)}
-.funnel-step small{display:block;color:#a99f90;font-size:10px;margin-top:2px}
-.gallery{padding:58px 0 76px}
-.gallery-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:26px}
-.gallery-head h2{font-size:clamp(29px,3.6vw,43px);margin:7px 0 7px;line-height:1.2}
-.gallery-head p{margin:0;color:var(--muted);font-size:13px;max-width:560px}
-.counter{color:var(--gold2);font:500 14px var(--serif);white-space:nowrap}
-.demo-panel{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.8fr);gap:0;border:1px solid rgba(210,168,62,.52);border-radius:8px;overflow:hidden;background:linear-gradient(115deg,#100e0a,#0b0907);box-shadow:0 24px 70px rgba(0,0,0,.28)}
-.compare-side{padding:24px;min-width:0}
-.compare-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
-.compare-top strong{font:500 17px var(--serif);color:#f1dca8}
-.compare-top span{font-size:10px;color:#a99f90;letter-spacing:1px;text-transform:uppercase}
-.slider-frame{--split:50%;position:relative;overflow:hidden;border:1px solid rgba(210,168,62,.35);border-radius:5px;background:#18150f;aspect-ratio:1.55/1;min-height:250px;isolation:isolate}
-.mock-screen{position:absolute;inset:0;overflow:hidden}
-.mock-screen.after{clip-path:inset(0 0 0 var(--split));}
-.mock-screen.before{clip-path:inset(0 calc(100% - var(--split)) 0 0)}
-.mock-ui{position:absolute;inset:0;padding:0;background:#f1eee8;color:#191919;font-family:Arial,sans-serif}
-.browserbar{height:26px;background:#e4e1dc;display:flex;align-items:center;gap:5px;padding:0 10px;border-bottom:1px solid #d4d0c8}
-.browserbar i{width:6px;height:6px;border-radius:50%;background:#b5aaa0}
-.browserbar b{font-size:8px;color:#69645e;margin-left:8px;font-weight:500}
-.mock-nav{height:39px;display:flex;align-items:center;justify-content:space-between;padding:0 4%;font-size:10px;border-bottom:1px solid #ddd8cf;background:#fff}
-.mock-nav strong{font:700 11px Arial;color:#26231e}
-.mock-nav span{font-size:8px;color:#6c665f;word-spacing:8px}
-.mock-hero{padding:5% 6%;min-height:150px;display:flex;align-items:center;justify-content:space-between;gap:12px;background:linear-gradient(110deg,#f5f2ec,#e9e3d8)}
-.mock-hero h4{font:bold clamp(15px,2vw,26px)/1.05 Arial;margin:0 0 8px;max-width:260px}
-.mock-hero p{font-size:9px;color:#555;margin:0 0 12px;max-width:210px}
-.mock-cta{display:inline-block;background:#222;color:white;border-radius:2px;padding:7px 10px;font-size:8px}
-.mock-visual{width:37%;height:120px;flex:0 0 37%;border-radius:3px;background:linear-gradient(145deg,#b9b0a1,#6c665e 55%,#292721);position:relative;overflow:hidden}
-.mock-visual:before{content:"";position:absolute;inset:14% 12% 0;background:linear-gradient(90deg,#222,#555 50%,#151515);transform:skewY(-8deg);border:3px solid #bca36b}
-.mock-visual:after{content:"";position:absolute;left:25%;right:25%;top:28%;height:2px;background:#e3c779;box-shadow:0 0 14px #e3c779}
-.mock-badges{display:flex;gap:8px;margin-top:12px}
-.mock-badges span{font-size:8px;background:#e3ded5;padding:6px 8px;color:#554e45}
-.mock-section{padding:12px 5%;background:#fff}
-.mock-section h5{font-size:11px;margin:0 0 8px}
-.mock-lines{display:grid;gap:6px}
-.mock-lines i{height:5px;background:#d8d4ce;border-radius:4px;width:88%}
-.mock-lines i:nth-child(2){width:70%}.mock-lines i:nth-child(3){width:54%}
-.mock-products{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}
-.mock-products div{height:48px;background:#e7e2d9;border:1px solid #d8d0c3;display:grid;place-items:center;font-size:8px;color:#61594e}
-.mock-footer{height:24px;background:#25221d}
-.mock-ui.improved .mock-nav{background:#14110d;color:#f6f0e4;border-color:#4d3d20}
-.mock-ui.improved .mock-nav strong{color:#e9ca7a}
-.mock-ui.improved .mock-nav span{color:#e2d7c3}
-.mock-ui.improved .mock-hero{background:linear-gradient(110deg,#17130d,#282116);color:#f7f1e6}
-.mock-ui.improved .mock-hero p{color:#d2c7b3}
-.mock-ui.improved .mock-cta{background:linear-gradient(100deg,#c99d39,#f1d17b);color:#171108}
-.mock-ui.improved .mock-section{background:#f8f5ef}
-.mock-ui.improved .mock-footer{background:#15120c}
-.slider-label{position:absolute;top:12px;z-index:5;padding:6px 9px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-.slider-label.before{left:12px;background:#29251f;color:#f3e7d2}
-.slider-label.after{right:12px;background:#e6c36c;color:#171108}
-.slider-divider{position:absolute;z-index:6;top:0;bottom:0;left:var(--split);width:2px;background:#f8e4b2;transform:translateX(-1px);pointer-events:none;box-shadow:0 0 12px rgba(0,0,0,.35)}
-.slider-handle{position:absolute;z-index:7;left:var(--split);top:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#e6c36c;border:2px solid #fff6df;color:#171108;display:grid;place-items:center;box-shadow:0 3px 12px #0008;font-size:17px;pointer-events:none}
-.slider-input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:9}
-.slider-input:focus-visible{outline:3px solid var(--gold2);outline-offset:-4px}
-.slider-caption{display:flex;justify-content:space-between;gap:10px;margin-top:9px;color:#a99f90;font-size:10px}
-.slider-caption strong{color:#e9d6a4;font-weight:500}
-.insight-side{border-left:1px solid var(--line);padding:30px 27px;display:flex;flex-direction:column;justify-content:center}
-.stage-pill{display:inline-flex;align-self:flex-start;padding:6px 10px;border:1px solid var(--line);border-radius:3px;color:var(--gold2);font-size:10px;letter-spacing:1px;text-transform:uppercase}
-.insight-side h3{font-size:clamp(24px,2.8vw,34px);line-height:1.17;margin:15px 0 10px}
-.insight-lead{color:#d9d1c4;font-size:13px;line-height:1.7;margin:0 0 19px}
-.issue-fix{display:grid;gap:13px;border-top:1px solid var(--line);padding-top:17px}
-.issue-fix div{display:grid;grid-template-columns:22px 1fr;gap:9px;align-items:start}
-.issue-fix .symbol{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}
-.symbol.bad{background:rgba(239,120,107,.16);color:var(--red)}
-.symbol.good{background:rgba(120,198,154,.16);color:var(--green)}
-.issue-fix strong{display:block;font-size:11px;margin-bottom:3px;color:#f4e6c4}
-.issue-fix p{font-size:11px;line-height:1.55;color:#bdb4a6;margin:0}
-.impact{margin-top:20px;padding:13px 14px;border:1px solid rgba(210,168,62,.24);background:rgba(210,168,62,.055)}
-.impact strong{display:block;color:var(--gold2);font:500 15px var(--serif);margin-bottom:4px}
-.impact p{font-size:11px;color:#c8bead;margin:0;line-height:1.6}
-.measure{margin-top:11px;color:#9f9689;font-size:10px;line-height:1.5}
-.measure b{color:#e4d4ad;font-weight:600}
-.gallery-controls{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:22px}
-.arrow{width:39px;height:39px;border:1px solid var(--gold);border-radius:50%;background:transparent;color:var(--gold2);cursor:pointer;font-size:18px;transition:.2s}
-.arrow:hover{background:var(--gold2);color:#171108}
-.dots{display:flex;gap:8px}
-.dotbtn{width:8px;height:8px;border:0;border-radius:50%;background:#554b3a;padding:0;cursor:pointer}
-.dotbtn[aria-current="true"]{background:var(--gold2);box-shadow:0 0 10px rgba(241,209,123,.45)}
-.bottom-note{margin-top:44px;padding:22px 0;border-top:1px solid var(--line);display:flex;justify-content:center;gap:26px;flex-wrap:wrap;color:#b9ad98;font-size:11px}
-.bottom-note span:before{content:"◆";font-size:8px;color:var(--gold);margin-right:8px}
-.cta-band{padding:48px 0 62px;background:linear-gradient(120deg,#141008,#090806);border-top:1px solid var(--line);text-align:center}
-.cta-band h2{font-size:clamp(28px,3.5vw,40px);margin:0 0 9px}
-.cta-band p{font-size:13px;color:var(--muted);margin:0 auto 20px;max-width:560px}
-footer{border-top:1px solid var(--line);padding:22px 0;color:#938a7d;font-size:11px}
-.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr .8fr;gap:20px}.funnel-step{padding:10px 6px;gap:7px}.funnel-step strong{font-size:13px}.funnel-step small{font-size:9px}.demo-panel{grid-template-columns:1fr}.insight-side{border-left:0;border-top:1px solid var(--line);padding:24px}.compare-side{padding:20px}}
-@media(max-width:650px){.wrap{width:91%}header{height:70px}.brand img{width:min(280px,66vw);max-height:50px}.hero{padding:52px 0 34px}.hero-grid{grid-template-columns:1fr;gap:22px}.hero-art{min-height:210px}.funnel-art{max-width:330px}.funnel-art div{height:33px;font-size:12px}.hero-orbit{width:220px;height:220px}.hero-foot{margin-top:22px;gap:12px}.funnel-steps{grid-template-columns:repeat(5,minmax(105px,1fr));overflow-x:auto;padding-bottom:7px}.funnel-step{padding:9px 8px}.funnel-step .n{flex-basis:27px;height:27px;font-size:11px}.funnel-step strong{font-size:12px}.funnel-step small{font-size:8px}.gallery{padding:42px 0 55px}.gallery-head{align-items:start}.gallery-head p{max-width:100%}.counter{display:none}.slider-frame{aspect-ratio:1.2/1;min-height:220px}.mock-nav{height:30px}.mock-nav span{word-spacing:2px;font-size:7px}.mock-hero{min-height:120px;padding:5%}.mock-hero h4{font-size:clamp(13px,4vw,21px)}.mock-visual{height:90px}.mock-section{padding:10px 5%}.mock-products div{height:35px;font-size:7px}.compare-side{padding:13px}.insight-side{padding:20px}.bottom-note{justify-content:flex-start;gap:10px;flex-direction:column}.foot{flex-direction:column}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.case-preview{padding:76px 0;background:#0b0907;border-top:1px solid rgba(210,168,62,.35);border-bottom:1px solid rgba(210,168,62,.35)}
+.case-preview-inner{width:min(1180px,88%);margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.case-preview-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#d2a83e;margin:0 0 13px}
+.case-preview h2{font:500 clamp(29px,3.5vw,43px)/1.2 "Playfair Display",Georgia,serif;color:#f8f5ef;margin:0 0 15px}
+.case-preview-copy>p:not(.case-preview-label){font-size:14px;line-height:1.85;color:#c9c1b3;max-width:590px;margin:0 0 24px}
+.case-preview-link{display:inline-flex;gap:12px;align-items:center;background:#d2a83e;color:#080706;padding:12px 17px;border-radius:3px;font-size:13px;font-weight:700}
+.case-preview-link:hover{background:#f1d17b}
+.case-preview-visual{border:1px solid rgba(210,168,62,.45);background:linear-gradient(145deg,#17130d,#0b0a08);padding:0;min-height:220px}
+.cp-top{height:34px;border-bottom:1px solid #514329;display:flex;align-items:center;gap:6px;padding:0 12px}
+.cp-top i{width:6px;height:6px;border-radius:50%;background:#b18d42}.cp-top span{font-size:9px;letter-spacing:1.5px;color:#a89a7e;margin-left:8px}
+.cp-main{padding:25px}.cp-main>b{font:500 19px "Playfair Display",Georgia,serif;color:#f1d17b}
+.cp-lines{margin:13px 0 18px}.cp-lines i{display:block;height:6px;width:90%;background:#494237;margin:8px 0}.cp-lines i:nth-child(2){width:72%}.cp-lines i:nth-child(3){width:53%}
+.cp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.cp-cards span{border:1px solid #62502d;padding:12px 8px;text-align:center;font-size:10px;color:#d7c9a8}
+.cp-bottom{margin-top:18px;border-top:1px solid #514329;padding-top:13px;color:#b5a88e;font-size:9px;letter-spacing:1.4px}.cp-bottom em{color:#e4bd5b;font-style:normal;padding:0 8px}
+@media(max-width:760px){.case-preview{padding:55px 0}.case-preview-inner{grid-template-columns:1fr;gap:28px}.case-preview-visual{min-height:190px}}
 </style>
-</head>
-<body>
-<header>
- <div class="wrap nav">
-  <a class="brand" href="index.html" aria-label="MH Creative Studio home">
-   <img src="header-brand.jpg" alt="MH Creative Studio original logo">
-  </a>
-  <a class="back" href="index.html">← Back to website</a>
- </div>
-</header>
-<main>
-<section class="hero">
- <div class="wrap hero-grid">
-  <div class="hero-copy">
-   <p class="kicker">Website Optimisation Gallery</p>
-   <h1>From visitors <span>to customers.</span></h1>
-   <p>Small website improvements can remove friction at every stage of the customer journey. Explore the difference.</p>
-   <div class="hero-actions">
-    <a class="btn primary" href="#examples">Explore the examples ↓</a>
-    <a class="btn secondary" href="index.html#contact">Discuss your website →</a>
-   </div>
-   <div class="hero-foot"><span>Five funnel stages</span><span>Before / after comparisons</span><span>Practical recommendations</span></div>
-  </div>
-  <div class="hero-art" aria-label="Five-stage marketing funnel animation">
-   <div class="hero-orbit"></div>
-   <div class="funnel-art" aria-hidden="true">
-    <div>Awareness</div><div>Interest</div><div>Consideration</div><div>Conversion</div><div>Retention</div>
-   </div>
-  </div>
- </div>
-</section>
-<section class="funnel-nav">
- <div class="wrap funnel-steps" id="funnelSteps" aria-label="Select a funnel stage">
-  <button class="funnel-step active" type="button" data-stage="0" aria-current="step"><span class="n">01</span><span><strong>Awareness</strong><small>Get noticed</small></span></button>
-  <button class="funnel-step" type="button" data-stage="1"><span class="n">02</span><span><strong>Interest</strong><small>Show value</small></span></button>
-  <button class="funnel-step" type="button" data-stage="2"><span class="n">03</span><span><strong>Consideration</strong><small>Build confidence</small></span></button>
-  <button class="funnel-step" type="button" data-stage="3"><span class="n">04</span><span><strong>Conversion</strong><small>Make action easy</small></span></button>
-  <button class="funnel-step" type="button" data-stage="4"><span class="n">05</span><span><strong>Retention</strong><small>Stay connected</small></span></button>
- </div>
-</section>
-<section class="gallery wrap" id="examples">
- <div class="gallery-head">
-  <div><p class="section-tag">See the difference</p><h2 id="galleryTitle">Make a stronger first impression.</h2><p id="galleryIntro">A visitor should understand what a business offers without having to work it out.</p></div>
-  <div class="counter" id="counter">01 / 05</div>
- </div>
- <div class="demo-panel">
-  <div class="compare-side">
-   <div class="compare-top"><strong id="compareTitle">Homepage message clarity</strong><span>Illustrative interface</span></div>
-   <div class="slider-frame" id="sliderFrame" style="--split:50%">
-    <div class="mock-screen before">
-     <div class="mock-ui" id="beforeUI">
-      <div class="browserbar"><i></i><i></i><i></i><b>www.example-business.com</b></div>
-      <div class="mock-nav"><strong>MY BUSINESS</strong><span>HOME ABOUT SERVICES CONTACT</span></div>
-      <div class="mock-hero"><div><h4 id="beforeHeadline">Welcome to our website</h4><p id="beforeSub">Quality services for your business.</p><span class="mock-cta" id="beforeCta">Learn more →</span></div><div class="mock-visual"></div></div>
-      <div class="mock-section"><h5 id="beforeSectionTitle">Our services</h5><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-products"><div>Service 01</div><div>Service 02</div><div>Service 03</div></div></div><div class="mock-footer"></div>
-     </div>
-    </div>
-    <div class="mock-screen after">
-     <div class="mock-ui improved" id="afterUI">
-      <div class="browserbar"><i></i><i></i><i></i><b>www.example-business.com</b></div>
-      <div class="mock-nav"><strong>MY BUSINESS</strong><span>HOME SERVICES ABOUT CONTACT</span></div>
-      <div class="mock-hero"><div><h4 id="afterHeadline">A clearer promise for the right customer</h4><p id="afterSub">A concise explanation of the service and who it helps.</p><span class="mock-cta" id="afterCta">Explore services →</span></div><div class="mock-visual"></div></div>
-      <div class="mock-section"><h5 id="afterSectionTitle">How we can help</h5><div class="mock-lines"><i></i><i></i><i></i></div><div class="mock-products"><div>Clear service</div><div>Key benefit</div><div>Next step</div></div></div><div class="mock-footer"></div>
-     </div>
-    </div>
-    <span class="slider-label before">Before</span><span class="slider-label after">After</span>
-    <div class="slider-divider"></div><div class="slider-handle" aria-hidden="true">↔</div>
-    <input class="slider-input" id="compareSlider" type="range" min="5" max="95" value="50" aria-label="Drag to compare before and after website examples">
-   </div>
-   <div class="slider-caption"><span><strong>← Before</strong> · Common friction</span><span><strong>After →</strong> · Suggested improvement</span></div>
-  </div>
-  <aside class="insight-side">
-   <span class="stage-pill" id="stagePill">01 · Awareness</span>
-   <h3 id="insightTitle">Make a strong first impression.</h3>
-   <p class="insight-lead" id="insightLead">Visitors need to understand what the business offers and whether it is relevant to them.</p>
-   <div class="issue-fix">
-    <div><span class="symbol bad">!</span><div><strong>Common mistake</strong><p id="mistake">A vague headline and generic introduction leave the offer unclear.</p></div></div>
-    <div><span class="symbol good">✓</span><div><strong>Our recommended fix</strong><p id="fix">Use a specific value statement that identifies the service and intended customer.</p></div></div>
-   </div>
-   <div class="impact"><strong id="impactTitle">Why it matters</strong><p id="impact">Clearer messaging helps relevant visitors decide whether to explore further.</p></div>
-   <p class="measure"><b>What to measure:</b> <span id="measure">Search impressions, organic clicks and landing-page engagement.</span></p>
-  </aside>
- </div>
- <div class="gallery-controls">
-  <button class="arrow" id="prev" type="button" aria-label="Previous funnel stage">‹</button>
-  <div class="dots" id="dots" aria-label="Gallery slide navigation">
-   <button class="dotbtn" type="button" data-stage="0" aria-label="Stage 1" aria-current="true"></button>
-   <button class="dotbtn" type="button" data-stage="1" aria-label="Stage 2"></button>
-   <button class="dotbtn" type="button" data-stage="2" aria-label="Stage 3"></button>
-   <button class="dotbtn" type="button" data-stage="3" aria-label="Stage 4"></button>
-   <button class="dotbtn" type="button" data-stage="4" aria-label="Stage 5"></button>
-  </div>
-  <button class="arrow" id="next" type="button" aria-label="Next funnel stage">›</button>
- </div>
- <div class="bottom-note"><span>Illustrative examples, not client projects</span><span>No invented performance results</span><span>Measure changes against a real baseline</span></div>
-</section>
-<section class="cta-band">
- <div class="wrap">
-  <p class="section-tag">Start with clarity</p>
-  <h2>Where is your website losing momentum?</h2>
-  <p>We can review your website, identify practical improvement opportunities and explain which changes are worth prioritising.</p>
-  <a class="btn primary" href="index.html#contact">Request a website review →</a>
- </div>
-</section>
-</main>
-<footer><div class="wrap foot"><span>© MH Creative Studio</span><a href="index.html">Return to homepage ↑</a></div></footer>
-<script>
-const stages=[
- {name:"Awareness",title:"Make a stronger first impression.",intro:"A visitor should understand what a business offers without having to work it out.",compare:"Homepage message clarity",headlineBefore:"Welcome to our website",subBefore:"Quality services for your business.",ctaBefore:"Learn more →",sectionBefore:"Our services",headlineAfter:"A clearer promise for the right customer",subAfter:"A concise explanation of the service and who it helps.",ctaAfter:"Explore services →",sectionAfter:"How we can help",insight:"Make a strong first impression.",lead:"Visitors need to understand what the business offers and whether it is relevant to them.",mistake:"A vague headline and generic introduction leave the offer unclear.",fix:"Use a specific value statement that identifies the service and intended customer.",impact:"Clearer messaging helps relevant visitors decide whether to explore further.",measure:"Search impressions, organic clicks and landing-page engagement."},
- {name:"Interest",title:"Help visitors understand the offer.",intro:"Once visitors arrive, the website should make it easy to find the service or information they need.",compare:"Service structure and navigation",headlineBefore:"Our services",subBefore:"We offer a wide range of solutions. Contact us to learn more.",ctaBefore:"Read more →",sectionBefore:"What we do",headlineAfter:"Find the right service for your needs",subAfter:"Services are grouped clearly, with a short explanation of who each one helps.",ctaAfter:"Compare services →",sectionAfter:"Choose your next step",insight:"Turn curiosity into understanding.",lead:"Visitors should be able to identify the relevant service and understand its value.",mistake:"A flat list of service names, unclear labels or crowded navigation makes visitors work too hard.",fix:"Group related services, use descriptive labels and provide concise explanations with a logical next step.",impact:"Better information structure can help visitors find relevant details and continue exploring.",measure:"Service-page visits, navigation use and progression to key pages."},
- {name:"Consideration",title:"Give customers reasons to feel confident.",intro:"Before making contact, people look for evidence, useful details and answers to the questions that matter to them.",compare:"Trust and buying guidance",headlineBefore:"Trusted by many customers",subBefore:"★★★★★ 5-star service. Best quality guaranteed.",ctaBefore:"Buy now →",sectionBefore:"Why choose us",headlineAfter:"See relevant proof and useful details",subAfter:"Verified project evidence, clear service information and guidance that helps people compare options.",ctaAfter:"View details →",sectionAfter:"Evidence that supports the decision",insight:"Replace uncertainty with useful evidence.",lead:"Visitors need enough relevant information to judge whether the business is credible and suitable.",mistake:"Unverified claims, reviews without matching evidence, or missing price and comparison context can create doubt.",fix:"Use authentic proof, consistent claims, relevant project context and clear buying guidance. Publish prices only when verified.",impact:"Relevant evidence can reduce unanswered questions and support a more informed decision.",measure:"Engagement with proof and pricing content, return visits and assisted enquiries."},
- {name:"Conversion",title:"Make the next step easy to take.",intro:"When a visitor is ready to enquire, unnecessary fields and unclear expectations can interrupt the journey.",compare:"Enquiry form and call to action",headlineBefore:"Contact us",subBefore:"Fill in the form below and we will get back to you.",ctaBefore:"Submit →",sectionBefore:"Your details",headlineAfter:"Tell us what you need",subAfter:"Ask only for essential details and explain what happens after the enquiry is sent.",ctaAfter:"Send my enquiry →",sectionAfter:"What happens next",insight:"Remove friction at the decision point.",lead:"A clear call to action and straightforward enquiry process help visitors complete the action they intended.",mistake:"Hidden contact options, too many form fields or no explanation of the next step can cause hesitation.",fix:"Use one clear primary action, request essential information and set an accurate expectation for the response.",impact:"A simpler journey makes it easier for interested visitors to submit a useful enquiry.",measure:"Form starts, form completion rate, submitted enquiries and qualified leads."},
- {name:"Retention",title:"Keep the relationship moving.",intro:"The customer journey does not end when someone makes an enquiry or purchase. Clear follow-up supports the next interaction.",compare:"Post-enquiry and customer follow-up",headlineBefore:"Thank you",subBefore:"Your message has been received.",ctaBefore:"Back to home",sectionBefore:"No further guidance",headlineAfter:"Your enquiry is in. Here is what happens next.",subAfter:"A clear confirmation, realistic response expectation and useful contact details.",ctaAfter:"Explore helpful information →",sectionAfter:"Stay informed",insight:"Make the next interaction clear.",lead:"Customers should know what happens after they enquire and where to go if they need help.",mistake:"A generic confirmation, no next-step information or hard-to-find support details leave customers uncertain.",fix:"Provide a useful confirmation, explain the next step and make support information easy to find. Only automate follow-up when the process is genuinely in place.",impact:"Clear follow-up can reduce uncertainty and support repeat contact, referrals and longer-term relationships.",measure:"Response time, repeat enquiries, returning customers, review requests and referrals."}
-];
-let current=0;
-const $=id=>document.getElementById(id);
-function setStage(index){
- current=(index+stages.length)%stages.length;
- const s=stages[current];
- $("counter").textContent=String(current+1).padStart(2,"0")+" / 05";
- $("galleryTitle").textContent=s.title;
- $("galleryIntro").textContent=s.intro;
- $("compareTitle").textContent=s.compare;
- $("beforeHeadline").textContent=s.headlineBefore;
- $("beforeSub").textContent=s.subBefore;
- $("beforeCta").textContent=s.ctaBefore;
- $("beforeSectionTitle").textContent=s.sectionBefore;
- $("afterHeadline").textContent=s.headlineAfter;
- $("afterSub").textContent=s.subAfter;
- $("afterCta").textContent=s.ctaAfter;
- $("afterSectionTitle").textContent=s.sectionAfter;
- $("stagePill").textContent=String(current+1).padStart(2,"0")+" · "+s.name;
- $("insightTitle").textContent=s.insight;
- $("insightLead").textContent=s.lead;
- $("mistake").textContent=s.mistake;
- $("fix").textContent=s.fix;
- $("impact").textContent=s.impact;
- $("measure").textContent=s.measure;
- document.querySelectorAll(".funnel-step").forEach((el,i)=>{el.classList.toggle("active",i===current);if(i===current)el.setAttribute("aria-current","step");else el.removeAttribute("aria-current")});
- document.querySelectorAll(".dotbtn").forEach((el,i)=>{if(i===current)el.setAttribute("aria-current","true");else el.removeAttribute("aria-current")});
- $("compareSlider").value=50;
- $("sliderFrame").style.setProperty("--split","50%");
-}
-document.querySelectorAll("[data-stage]").forEach(el=>el.addEventListener("click",()=>setStage(Number(el.dataset.stage))));
-$("prev").addEventListener("click",()=>setStage(current-1));
-$("next").addEventListener("click",()=>setStage(current+1));
-$("compareSlider").addEventListener("input",e=>$("sliderFrame").style.setProperty("--split",e.target.value+"%"));
-setStage(0);
-</script>
-</body>
-</html>
