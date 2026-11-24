@@ -116,6 +116,21 @@ footer{border-top:1px solid rgba(210,168,62,.45);padding:23px 0;background:#0505
 .footer{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
 .footer strong{font:18px var(--serif);color:var(--gold2)}
 footer a{color:var(--gold2)}
+ .footer-socials{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:16px;
+}
+.footer-socials a{
+  color:var(--gold2);
+  font-size:12px;
+  transition:color .2s ease;
+}
+.footer-socials a:hover{
+  color:#fff;
+}
 @media(max-width:1050px){
  .navlinks{gap:18px}.brand img{width:340px}
  .studio-content{grid-template-columns:1fr;gap:25px}
@@ -481,13 +496,38 @@ footer a{color:var(--gold2)}
 </section>
 </main>
 
+
 <footer>
- <div class="container footer">
-  <strong>MH Creative Studio</strong>
-  <span>© <span id="year"></span> MH Creative Studio. All rights reserved.</span>
-  <a href="#home">Back to top ↑</a>
- </div>
+  <div class="container footer">
+    <strong>MH Creative Studio</strong>
+
+    <div class="footer-socials" aria-label="Social media links">
+      <a href="https://www.facebook.com/profile.php?id=61589499061553"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Facebook">Facebook</a>
+
+      <a href="https://www.instagram.com/mh_creative297/"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Instagram">Instagram</a>
+
+      <a href="https://www.youtube.com/channel/UCNNhIiRXbsBPjml1EA3hTDQ"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="YouTube">YouTube</a>
+
+      <a href="https://pin.it/tV5XjmU1N"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Pinterest">Pinterest</a>
+
+      <a href="https://www.tiktok.com/@mh_creative297?is_from_webapp=1&amp;sender_device=pc"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="TikTok">TikTok</a>
+    </div>
+
+    <span>© <span id="year"></span> MH Creative Studio. All rights reserved.</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
 </footer>
+
 <script>
 function toggleMenu(){
  const nav=document.getElementById("navlinks");
